@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>QR Code Generator</title>
+</head>
+<body>
+    <h1>QR Code Generator</h1>
+    <form method="post">
+        <label for="d">Enter data (URL):</label><br>
+        <input type="text" name="d" required><br>
+        <label for="fill_color">Fill color:</label><br>
+        <input type="color" name="fill_color" value="#000000"><br>
+        <label for="back_color">Background color:</label><br>
+        <input type="color" name="back_color" value="#FFFFFF"><br><br>
+        <input type="submit" value="Generate QR Code">
+    </form>
+    
+    {% if qr_created %}
+    <h2>QR Code Generated:</h2>
+    <img src="{{ url_for('static', filename='qr_code.png') }}" alt="QR Code">
+    {% endif %}
+    <img src="C:\Users\Adity\Downloads\priyanka_blackwidow.jpg" >
+</body>
+</html>
